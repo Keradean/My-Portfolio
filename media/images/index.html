@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <!--===== Metatags =====-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Dennis De Col" />
+    <meta name="keywords" content="Unity, programmer, Dennis De Col" />
+    <meta
+      name="description"
+      content="Portfolio Website von Dennis De Col - Game & Multimedia Developer in Ausbildung"
+    />
+    <meta name="robots" content="index, follow, noarchive, noimageindex" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' https: data:; media-src 'self' https:; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline'; font-src 'self' https: data:;"
+    />
+
+    <!--===== Resources =====-->
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/icons/svg/logo.svg"
+    />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="js/index.js" defer></script>
+
+    <title>Dennis De Col</title>
+  </head>
+  <body>
+    <!--===== Navigation =====-->
+    <header>
+      <nav class="navbar">
+        <div class="navbar-left">DDC</div>
+        <div class="navbar-middle">
+          <a href="#home">Home</a>
+          <a href="#about">Über Mich</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projekte</a>
+        </div>
+        <div class="navbar-right">
+          <a
+            href="https://github.com/Keradean"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img
+              class="svg"
+              src="/icons/svg/github.svg"
+              alt="Dennis De Col's GitHub Profile"
+          /></a>
+          <a
+            href="https://linkedin.com/in/dennis-de-col"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img
+              class="svg"
+              src="/icons/svg/linkedin.svg"
+              alt="Dennis De Col's LinkedIn Profile "
+          /></a>
+          <a
+            id="darkModeToggle"
+            class="dark-mode-toggle"
+            aria-label="Toggle Dark Mode"
+          >
+            <img class="moon-icon" src="/icons/svg/moon.svg" alt="Dark Mode" />
+
+            <img class="sun-icon" src="/icons/svg/sun.svg" alt="Light Mode" />
+          </a>
+        </div>
+      </nav>
+    </header>
+    <!--===== Hero Section =====-->
+    <section class="hero-section">
+      <video class="background-video" autoplay muted loop>
+        <source src="media/videos/landing.mp4" type="video/mp4" />
+        Dein Browser unterstützt keine HTML5-Videos.
+      </video>
+
+      <div class="text-container">
+        <h1>Dennis De Col</h1>
+        <div class="flex-container">
+          <h2 id="change"></h2>
+          <h2>Developer</h2>
+        </div>
+      </div>
+    </section>
+    <main>
+      <!--===== About Me Section =====-->
+      <section id="about" class="about-me">
+        <h2>Über Mich</h2>
+        <div id="aboutme" class="cards-container">
+          <div class="card-left">
+            <img
+              src="/media/images/pre-img01.webp"
+              alt="Profilbild von Dennis De Col"
+              loading="lazy"
+            />
+          </div>
+          <div class="card-right">
+            <h6>Vom Gartencenter zur Spieleentwicklung!</h6>
+            <p>
+              Ich verbinde sieben Jahre Kundenerfahrung mit frischer
+              Coding-Power aus meiner Umschulung (2024-2026) zum Game- &
+              Multimedia-Entwickler.
+            </p>
+            <p>
+              Seit 2024 tauche ich täglich in Unity, C# und Blender ein. Dabei
+              hilft mir mein früherer Job im Online- und Leasing-Service enorm:
+              Projektpläne aufstellen, Deadlines einhalten, klar kommunizieren,
+              das war schon immer mein Alltag.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!--===== Skill Section =====-->
+      <section id="skills" class="skills-section">
+        <h2>Skills</h2>
+        <div class="skills-container">
+          <!--===== Unity =====-->
+          <div class="skill-desc one">
+            <h5>Unity</h5>
+            <p>
+              Seit 2024 arbeite ich täglich mit Unity und entwickle kleinere
+              Spieleprototypen sowie Gameplay-Mechaniken. Dabei nutze ich
+              Scriptable Objects, Events, Prefab-Workflows und arbeite zunehmend
+              mit sauberer Architektur (z. B. MVC-ähnlichen Patterns). Besonders
+              Spaß macht mir das Erstellen von interaktiven Systemen wie
+              Movement, Gegner-KI und Inventar-Logiken.
+            </p>
+          </div>
+          <div class="skill-img two">
+            <img
+              src="https://img.shields.io/badge/unity-%23000000.svg?style=for-the-badge&logo=unity&logoColor=white"
+              alt="Unity"
+            />
+            <progress value="75" max="100">75%</progress>
+          </div>
+
+          <!--===== C# =====-->
+          <div class="skill-img three">
+            <img
+              src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white"
+              alt="C#"
+            />
+            <progress value="75" max="100">75%</progress>
+          </div>
+          <div class="skill-desc four">
+            <h5>C#</h5>
+            <p>
+              C# ist meine Hauptprogrammiersprache – von objektorientierter
+              Programmierung über Events, Interfaces und Generics bis hin zu
+              eigenen Tools in Unity. Ich setze großen Wert auf sauberen, gut
+              strukturierten Code und arbeite zunehmend test- und
+              modulorientiert.
+            </p>
+          </div>
+
+          <!--===== Blender =====-->
+
+          <div class="skill-desc five">
+            <h5>Blender</h5>
+            <p>
+              In Blender erstelle ich einfache 3D-Modelle, Animationen und
+              Game-Assets. Mein Fokus liegt auf Low-Poly-Modelling, UV-Mapping
+              und kleinen Animationen für Spieleprototypen. Ich lerne außerdem
+              regelmäßig neue Workflows rund um Texturing und Lighting.
+            </p>
+          </div>
+          <div class="skill-img six">
+            <img
+              src="https://img.shields.io/badge/blender-%23F5792A.svg?style=for-the-badge&logo=blender&logoColor=white"
+              alt="Blender"
+            />
+            <progress value="75" max="100">75%</progress>
+          </div>
+          <!--===== Weiß ich noch nicht =====-->
+          <div class="skill-img seven">
+            <img
+              src="https://img.shields.io/badge/Aseprite-FFFFFF?style=for-the-badge&logo=Aseprite&logoColor=7D929E"
+              alt="Aseprite"
+            />
+            <progress value="75" max="100">75%</progress>
+          </div>
+          <div class="skill-desc eight">
+            <h5>Aseprite</h5>
+            <p>
+              Für 2D-Projekte nutze ich Aseprite, um Sprite-Sheets, Animationen
+              und UI-Elemente zu erstellen. Ich experimentiere viel mit Idle-,
+              Walk- und Attack-Animationen und verbessere meine Technik im
+              Pixel-Art-Shading.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!--===== Projects Section =====-->
+      <section id="projects" class="projects-section">
+        <h2>Meine Projekte</h2>
+        <div class="project-cards">
+          <div class="projects-container">
+            <div class="project-card-head"><h4>MechmPut</h4></div>
+            <div class="project-card-body">
+              <img src="/media/images/MechmPutLogo.png" alt="Project Image" />
+            </div>
+            <div class="project-card-footer">
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+            </div>
+          </div>
+          <div class="projects-container">
+            <div class="project-card-head"><h4>under Construction</h4></div>
+            <div class="project-card-body">
+              <img
+                src="/media/images/under-construction.png"
+                alt="Project Image"
+              />
+            </div>
+            <div class="project-card-footer">
+              <ul>
+                <li>Tech Stack</li>
+                <li>GitHub Link</li>
+                <li>Live Demo</li>
+              </ul>
+            </div>
+          </div>
+          <div class="projects-container">
+            <div class="project-card-head"><h4>under Construction</h4></div>
+            <div class="project-card-body">
+              <img
+                src="/media/images/under-construction.png"
+                alt="Project Image"
+              />
+            </div>
+            <div class="project-card-footer">
+              <ul>
+                <li>Tech Stack</li>
+                <li>GitHub Link</li>
+                <li>Live Demo</li>
+              </ul>
+            </div>
+          </div>
+          <div class="projects-container">
+            <div class="project-card-head"><h4>Riesenrad</h4></div>
+            <div class="project-card-body">
+              <video class="background-video" autoplay muted loop>
+                <source
+                  src="media/videos/DeCol_Freizeitpark.mp4"
+                  type="video/mp4"
+                />
+                Dein Browser unterstützt keine HTML5-Videos.
+              </video>
+            </div>
+            <div class="project-card-footer">
+              <ul>
+                <li>Blender</li>
+                <li>GitHub Link</li>
+                <li>Live Demo</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-left">
+        <h5>DDC</h5>
+        <a href="#about">Über Mich</a>
+        <a href="#contact">Kontaktiere Mich</a>
+      </div>
+      <div class="footer-right">
+        © 2025 Dennis De Col | All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
