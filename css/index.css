@@ -373,7 +373,9 @@ body {
         "six"
         "five"
         "seven"
-        "eight";
+        "eight"
+        "nine"
+        "ten";
 
       .one {
         grid-area: one;
@@ -408,6 +410,15 @@ body {
 
       .eight {
         grid-area: eight;
+        border: none;
+      }
+
+      .nine {
+        grid-area: nine;
+      }
+
+      .ten {
+        grid-area: ten;
         border: none;
       }
 
@@ -731,7 +742,8 @@ body {
           "one two"
           "three four"
           "five six"
-          "seven eight";
+          "seven eight
+          "nine ten";
 
         .one {
           border-left: 0.0625rem solid rgba(255, 255, 255, 0.2);
@@ -749,6 +761,9 @@ body {
           border-left: 0.0625rem solid rgba(255, 255, 255, 0.2);
         }
 
+        .ten {
+          border-left: 0.0625rem solid rgba(255, 255, 255, 0.2);
+        }
         .skill-img,
         .skill-desc {
           min-height: 250px;
@@ -902,7 +917,8 @@ body {
           "two one"
           "four three"
           "six five"
-          "eight seven";
+          "eight seven"
+          "nine ten";
 
         .one {
           border-right: 0.0625rem solid var(--surface);
@@ -938,6 +954,15 @@ body {
         .eight {
           border-left: 0.0625rem solid var(--surface);
           border-right: none;
+        }
+
+        .nine {
+          border-right: none;
+        }
+
+        .ten {
+          border-right: 0.0625rem solid var(--surface);
+          border-left: none;
         }
 
         .skill-img,
