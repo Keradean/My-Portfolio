@@ -1,80 +1,103 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <!--===== Metatags =====-->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Dennis De Col" />
-    <meta name="keywords" content="Unity, programmer, Dennis De Col" />
-    <meta
-      name="description"
-      content="Portfolio Website von Dennis De Col - Game & Multimedia Developer in Ausbildung"
-    />
-    <meta name="robots" content="index, follow, noarchive, noimageindex" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; img-src 'self' https: data:; media-src 'self' https:; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline'; font-src 'self' https: data:;"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dennis De Col | Game & Multimedia Developer</title>
 
-    <!--===== Resources =====-->
-    <link rel="stylesheet" href="css/index.css" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="icons/png/logo.png"
-    />
-    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-    <script src="js/index.js" defer></script>
+  <!--===== SEO =====-->
+  <meta name="description" content="Portfolio von Dennis De Col, Game- und Multimedia-Entwickler. Unity, C#, Blender. Prototypen, Gameplay-Systeme und eigene Tools." />
+  <meta name="author" content="Dennis De Col" />
+  <meta name="robots" content="index, follow, noarchive, noimageindex" />
+  <link rel="canonical" href="https://DEINE-DOMAIN.de/" />
 
-    <title>Dennis De Col</title>
-  </head>
+  <!--===== Theme / Mobile =====-->
+  <meta name="theme-color" content="#1a1535" />
+  <meta name="color-scheme" content="dark" />
+
+  <!--===== Open Graph (Link-Vorschau) =====-->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Dennis De Col | Game & Multimedia Developer" />
+  <meta property="og:description" content="Portfolio von Dennis De Col, Game- und Multimedia-Entwickler. Unity, C#, Blender." />
+  <meta property="og:url" content="https://DEINE-DOMAIN.de/" />
+  <meta property="og:image" content="https://DEINE-DOMAIN.de/media/images/og-preview.png" />
+  <meta property="og:locale" content="de_DE" />
+
+  <!--===== Twitter Card =====-->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Dennis De Col | Game & Multimedia Developer" />
+  <meta name="twitter:image" content="https://DEINE-DOMAIN.de/media/images/og-preview.png" />
+
+  <!--===== Content Security Policy =====-->
+  <meta
+          http-equiv="Content-Security-Policy"
+          content="default-src 'self'; img-src 'self' https: data:; media-src 'self' https:; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' https: data:;"
+  />
+
+  <!--===== Icons =====-->
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/png/logo.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/png/apple-touch-icon.png" />
+
+  <!--===== Resources =====-->
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="preload" href="fonts/Inter/Inter_Regular.ttf" as="font" type="font/ttf" crossorigin />
+  <script src="js/index.js" defer></script>
+</head>
   <body>
     <!--===== Navigation =====-->
     <header>
       <nav class="navbar">
-        <div class="navbar-left">
-          <img
-                  class="svg"
-                  src="media/images/DDC Logo.png"
-                  alt="Dennis De Col's Itch.io Seite "
-          />
-        </div>
-        <div class="navbar-middle">
-          <a href="https://dennisdecol.net">Home</a>
-          <a href="#about">Über Mich</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projekte</a>
-        </div>
-        <div class="navbar-right">
-          <a
-            href="https://github.com/Keradean"
-            target="_blank"
-            rel="noopener noreferrer"
+        <button class="navbar-toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navbar-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="navbar-menu" id="navbar-menu">
+          <div class="navbar-left">
+            <img
+                    class="svg"
+                    src="media/images/DDC Logo.png"
+                    alt="Logo von Dennis De Col"
+            />
+          </div>
+          <div class="navbar-middle">
+            <a href="#">Home</a>
+            <a href="#about">Über Mich</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projekte</a>
+            <a href="#contact">Kontakt</a>
+          </div>
+          <div class="navbar-right">
+            <a
+                    href="https://github.com/Keradean"
+                    target="_blank"
+                    rel="noopener noreferrer"
             ><img
-              class="svg"
-              src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1naXRodWItaWNvbiBsdWNpZGUtZ2l0aHViIj48cGF0aCBkPSJNMTUgMjJ2LTRhNC44IDQuOCAwIDAgMC0xLTMuNWMzIDAgNi0yIDYtNS41LjA4LTEuMjUtLjI3LTIuNDgtMS0zLjUuMjgtMS4xNS4yOC0yLjM1IDAtMy41IDAgMC0xIDAtMyAxLjUtMi42NC0uNS01LjM2LS41LTggMEM2IDIgNSAyIDUgMmMtLjMgMS4xNS0uMyAyLjM1IDAgMy41QTUuNDAzIDUuNDAzIDAgMCAwIDQgOWMwIDMuNSAzIDUuNSA2IDUuNS0uMzkuNDktLjY4IDEuMDUtLjg1IDEuNjUtLjE3LjYtLjIyIDEuMjMtLjE1IDEuODV2NCIvPjxwYXRoIGQ9Ik05IDE4Yy00LjUxIDItNS0yLTctMiIvPjwvc3ZnPg=="
-              alt="Dennis De Col's GitHub Profile"
-          /></a>
-          <a
-            href="https://linkedin.com/in/dennis-de-col"
-            target="_blank"
-            rel="noopener noreferrer"
+                    class="svg"
+                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1naXRodWItaWNvbiBsdWNpZGUtZ2l0aHViIj48cGF0aCBkPSJNMTUgMjJ2LTRhNC44IDQuOCAwIDAgMC0xLTMuNWMzIDAgNi0yIDYtNS41LjA4LTEuMjUtLjI3LTIuNDgtMS0zLjUuMjgtMS4xNS4yOC0yLjM1IDAtMy41IDAgMC0xIDAtMyAxLjUtMi42NC0uNS01LjM2LS41LTggMEM2IDIgNSAyIDUgMmMtLjMgMS4xNS0uMyAyLjM1IDAgMy41QTUuNDAzIDUuNDAzIDAgMCAwIDQgOWMwIDMuNSAzIDUuNSA2IDUuNS0uMzkuNDktLjY4IDEuMDUtLjg1IDEuNjUtLjE3LjYtLjIyIDEuMjMtLjE1IDEuODV2NCIvPjxwYXRoIGQ9Ik05IDE4Yy00LjUxIDItNS0yLTctMiIvPjwvc3ZnPg=="
+                    alt="GitHub-Profil von Dennis De Col"
+            /></a>
+            <a
+                    href="https://linkedin.com/in/dennis-de-col"
+                    target="_blank"
+                    rel="noopener noreferrer"
             ><img
-              class="svg"
-              src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1saW5rZWRpbi1pY29uIGx1Y2lkZS1saW5rZWRpbiI+PHBhdGggZD0iTTE2IDhhNiA2IDAgMCAxIDYgNnY3aC00di03YTIgMiAwIDAgMC0yLTIgMiAyIDAgMCAwLTIgMnY3aC00di03YTYgNiAwIDAgMSA2LTZ6Ii8+PHJlY3Qgd2lkdGg9IjQiIGhlaWdodD0iMTIiIHg9IjIiIHk9IjkiLz48Y2lyY2xlIGN4PSI0IiBjeT0iNCIgcj0iMiIvPjwvc3ZnPg=="
-              alt="Dennis De Col's LinkedIn Profile "
-          /></a>
-          <a
-            href="https://keradean.itch.io/"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><img
-              class="svg"
-              src="media/images/itchio-logo-textless-white.png"
-              alt="Dennis De Col's Itch.io Seite "
-          /></a>
+                    class="svg"
+                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1saW5rZWRpbi1pY29uIGx1Y2lkZS1saW5rZWRpbiI+PHBhdGggZD0iTTE2IDhhNiA2IDAgMCAxIDYgNnY3aC00di03YTIgMiAwIDAgMC0yLTIgMiAyIDAgMCAwLTIgMnY3aC00di03YTYgNiAwIDAgMSA2LTZ6Ii8+PHJlY3Qgd2lkdGg9IjQiIGhlaWdodD0iMTIiIHg9IjIiIHk9IjkiLz48Y2lyY2xlIGN4PSI0IiBjeT0iNCIgcj0iMiIvPjwvc3ZnPg=="
+                    alt="LinkedIn-Profil von Dennis De Col"
+            /></a>
+            <a
+                    href="https://keradean.itch.io/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+            >
+              <img
+                      class="svg"
+                      src="media/images/itchio-logo-textless-white.png"
+                      alt="Dennis De Col – itch.io Profil"
+              />
+            </a>
+          </div>
         </div>
       </nav>
     </header>
@@ -82,13 +105,15 @@
     <section class="hero-section">
       <video class="background-video" autoplay muted loop>
         <source src="media/videos/landing.mp4" type="video/mp4" />
+        <track kind="subtitles" srclang="de" label="Deutsch" src="media/videos/landing_de.vtt" default>
+        <track kind="descriptions" srclang="de" label="Beschreibung (Deutsch)" src="media/videos/landing_desc_de.vtt">
         Dein Browser unterstützt keine HTML5-Videos.
       </video>
 
       <div class="text-container">
         <h1>Dennis De Col</h1>
         <div class="flex-container">
-          <h2 id="change"></h2>
+          <h2 id="change" aria-live="polite">Game</h2>
           <h2>Developer</h2>
         </div>
       </div>
@@ -98,11 +123,11 @@
       <section id="about" class="about-me">
         <h2>Über Mich</h2>
         <hr>
-        <div id="aboutme" class="cards-container">
+        <div id="about-me" class="cards-container">
           <div class="card-left">
             <img
-              src="/media/images/pre-img01.webp"
-              alt="Profilbild von Dennis De Col"
+              src="media/images/pre-img01.webp"
+              alt="Porträt von Dennis De Col"
               loading="lazy"
             />
           </div>
@@ -126,8 +151,8 @@
           <div class="skill-desc one">
             <h5>Unity</h5>
             <p>
-              Unity ist mein Spielplatz. Seit 2024 baue ich hier Prototypen und Gameplay-Mechaniken, von Movement über Gegner KI bis zu Inventarsystemen.
-              Ich arbeite mit Scriptable Objects, Events und Prefab Workflows und achte zunehmend auf saubere Architektur.
+              Unity ist mein Spielplatz. Seit 2024 baue ich hier Prototypen und Gameplay-Mechaniken, von Movement über Gegner-KI bis zu Inventar-Systemen.
+              Ich arbeite mit Scriptable Objects, Events und Prefab-Workflows und achte zunehmend auf saubere Architektur.
               Am meisten Spaß macht der Moment, wenn ein System zum ersten Mal so funktioniert wie gedacht.
             </p>
           </div>
@@ -205,7 +230,7 @@
             />
             <progress value="70" max="100">70%</progress>
           </div>
-        </div>   <!-- ← Ende skills-container -->
+        </div>
       </section>
       <!--===== Projects Section =====-->
       <section id="projects" class="projects-section">
@@ -215,7 +240,7 @@
           <div class="projects-container">
             <div class="project-card-head"><h4>MechmPut</h4></div>
             <div class="project-card-body">
-              <img src="/media/images/MechmPutLogo.png" alt="Project Image" />
+              <img src="media/images/MechmPutLogo.png" alt="Logo: MechmPut" />
             </div>
             <div class="project-card-footer">
               <ul>
@@ -228,10 +253,10 @@
           <div class="projects-container">
             <div class="project-card-head"><h4>under Construction</h4></div>
             <div class="project-card-body">
-              <img
-                src="/media/images/under-construction.png"
-                alt="Project Image"
-              />
+               <img
+                 src="media/images/under-construction.png"
+                 alt="Platzhalter: Projekt in Arbeit"
+               />
             </div>
             <div class="project-card-footer">
               <ul>
@@ -244,10 +269,10 @@
           <div class="projects-container">
             <div class="project-card-head"><h4>under Construction</h4></div>
             <div class="project-card-body">
-              <img
-                src="/media/images/under-construction.png"
-                alt="Project Image"
-              />
+                <img
+                  src="media/images/under-construction.png"
+                  alt="Platzhalter: Projekt in Arbeit"
+                />
             </div>
             <div class="project-card-footer">
               <ul>
@@ -265,6 +290,8 @@
                   src="media/videos/DeCol_Freizeitpark.mp4"
                   type="video/mp4"
                 />
+                <track kind="subtitles" srclang="de" label="Deutsch" src="media/videos/DeCol_Freizeitpark_de.vtt" default>
+                <track kind="descriptions" srclang="de" label="Beschreibung (Deutsch)" src="media/videos/DeCol_Freizeitpark_desc_de.vtt">
                 Dein Browser unterstützt keine HTML5-Videos.
               </video>
             </div>
@@ -278,6 +305,46 @@
           </div>
         </div>
       </section>
+      <section id="contact" class="contact-section">
+        <h2>Kontakt</h2>
+        <hr>
+        <div class="contact-card">
+          <h3>Lass uns reden</h3>
+          <p>
+            Du suchst einen motivierten Unity Entwickler, hast ein Projekt im Kopf
+            oder willst einfach Hallo sagen? Schreib mir, ich antworte so schnell ich kann.
+          </p>
+          <a class="mail-button" href="mailto:dennis.decol@murena.io">E-Mail schreiben</a>
+          <span class="contact-divider">oder direkt hier</span>
+          <div class="contact-socials">
+            <a href="https://github.com/Keradean" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+                <path d="M9 18c-4.51 2-5-2-7-2"/>
+              </svg>
+            </a>
+            <a href="https://linkedin.com/in/dennis-de-col" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                <rect width="4" height="12" x="2" y="9"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+            </a>
+            <a href="https://keradean.itch.io/" target="_blank" rel="noopener noreferrer" aria-label="itch.io">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <line x1="6" x2="10" y1="11" y2="11"/><line x1="8" x2="8" y1="9" y2="13"/>
+                <line x1="15" x2="15.01" y1="12" y2="12"/>
+                <line x1="18" x2="18.01" y1="10" y2="10"/>
+                <path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.544-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"/>
+              </svg>
+              <!--/*SVG wurden von Claude erstellt*/-->
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
       <div class="footer-left">
@@ -288,8 +355,6 @@
         />
       </div>
       <div class="footer-center">
-        <a href="#about">Über Mich</a>
-        <a href="#contact">Kontaktiere Mich</a>
       </div>
       <div class="footer-right">
       </div>
