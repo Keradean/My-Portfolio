@@ -12,7 +12,7 @@ if (change) {
     const word = words[w];
     // prefer positive condition to avoid negated condition warnings
     if (deleting) {
-      change.textContent = word.slice(0, i - 1);
+      change.textContent = word.slice(0, i -1);
       i--;
       if (i === 0) {
         deleting = false;
